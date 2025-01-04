@@ -39,7 +39,7 @@ CHECK_ROOT
 dnf install mysql-server -y &>>$LOG_FILE_NAME
 VALIDATE $? "Installing MYSQL server"
 
-systemctl start mysql-server $LOG_FILE_NAME
+systemctl start mysql-server &>>$LOG_FILE_NAME
 VALIDATE $? "Starting MYSQL server"
 
 mysql -h mysql.daws82s.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
