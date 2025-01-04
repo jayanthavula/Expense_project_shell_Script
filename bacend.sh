@@ -19,6 +19,7 @@ function CHECK_ROOT
     then
         echo "Please execute script with Sudo access"
         exit 1
+    fi    
 }
 
 function VALIDATE
