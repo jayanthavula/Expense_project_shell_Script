@@ -42,7 +42,7 @@ VALIDATE $? "Installing MYSQL server"
 systemctl enable mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "Enabling MySQL Server"
 
-systemctl start mysql-server &>>$LOG_FILE_NAME
+systemctl start mysqld &>>$LOG_FILE_NAME
 VALIDATE $? "Starting MYSQL server"
 
 mysql -h mysql.daws82s.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE_NAME
