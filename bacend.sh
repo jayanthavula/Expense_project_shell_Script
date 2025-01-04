@@ -53,7 +53,7 @@ then
 else
     echo -e "expense user already exists ... $Y SKIPPING $N"
 fi
-
+rm -rf /app/
 mkdir /app
 VALIDATE $? "/app directory creation"
 
