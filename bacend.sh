@@ -24,7 +24,7 @@ function CHECK_ROOT
 
 function VALIDATE
 {
-   if [$1 -ne 0 ]
+   if [ $1 -ne 0 ]
    then
         echo -e "$2 ... $R FAILURE $N"
         exit 1
@@ -36,13 +36,13 @@ function VALIDATE
 echo "Script started executing at $TIME_STAMP" &>> $LOG_FILE_NAME
 CHECK_ROOT
 
-dnf module disable nodejs -y
+dnf module disable nodejs -y &>>$LOG_FILE_NAME
 VALIDATE $? "Disabled nodejs module"
 
-dnf module enable nodejs:20 -y
+dnf module enable nodejs:20 -y &>>$LOG_FILE_NAME
 VALIDATE $? "enable nodejs module with version 20"
 
-dnf install nodejs -y
+dnf install nodejs -y &>>$LOG_FILE_NAME
 VALIDATE $? "Installing nodejs"
 
 id expense &>>$LOG_FILE_NAME
