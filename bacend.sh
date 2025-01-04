@@ -33,7 +33,7 @@ function VALIDATE
     fi    
 }
 
-echo "Script started executing at $TIME_STAMP" &>> $LOG_FILE_NAME
+echo "Script started executing at $TIME_STAMP" &>>$LOG_FILE_NAME
 CHECK_ROOT
 
 dnf module disable nodejs -y &>>$LOG_FILE_NAME
