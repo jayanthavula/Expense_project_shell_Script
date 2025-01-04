@@ -10,7 +10,7 @@ N="\e[0m"
 LOGS_FOLDER="/var/log/expense-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1)
 TIME_STAMP=$(date +%Y-%m-%d-%H-%M-%S)
-LOG_FILE_NAME="$LOGS_FOLDER/$LOG_FILE-$TIME_STAMP
+LOG_FILE_NAME=$LOGS_FOLDER/$LOG_FILE-$TIME_STAMP
 
 function CHECK_ROOT
 {
