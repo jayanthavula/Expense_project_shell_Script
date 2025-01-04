@@ -71,6 +71,9 @@ VALIDATE $? "Installing dependencies"
 
 cp /home/ec2-user/Expense_project_shell_Script/backend.service /etc/systemd/system/backend.service
 
+dnf install mysql -y &>>$LOG_FILE_NAME
+VALIDATE $? "Installing MySQL Client"
+
 mysql -h mysql.jaydevops.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE_NAME
 VALIDATE $? "Setting up the transactions schema and tables"
 
