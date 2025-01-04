@@ -3,10 +3,10 @@
 
 USERID=$UID
 
-R= "\e[31m"
-G= "\e[32m"
-Y= "\e[33m"
-N= "\e[m0"
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[m0"
 
 LOGS_FOLDER="/var/log/expense-logs"
 LOG_FILE=$(echo $0 | cut -d "." -f1 )
